@@ -1,4 +1,5 @@
 #include "Engine.h"
+#include "Log.h"
 
 namespace Vector
 {
@@ -14,6 +15,8 @@ namespace Vector
 
 	void Engine::Run()
 	{
+		VC_CORE_INFO("Engine on");
+
 		while (true);
 	}
 }

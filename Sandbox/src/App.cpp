@@ -10,7 +10,7 @@ public:
 
 	~Sandbox()
 	{
-
+		VC_INFO("Goodbye");
 	}
 };
 
