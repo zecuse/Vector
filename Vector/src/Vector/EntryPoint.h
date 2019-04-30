@@ -6,6 +6,9 @@
 
 	int main(int argc, char** argv)
 	{
+		Vector::Log::Init();
+		VC_CORE_WARN("Initialized!");
+
 		auto app = Vector::CreateApplication();
 		app->Run();
 		delete app;

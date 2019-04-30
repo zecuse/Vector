@@ -27,9 +27,15 @@
     <ClInclude Include="src\Vector\Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Vector\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Vector\Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

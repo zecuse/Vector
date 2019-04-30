@@ -5,7 +5,7 @@ class Sandbox : public Vector::Engine
 public:
 	Sandbox()
 	{
-
+		VC_INFO("Hello");
 	}
 
 	~Sandbox()
