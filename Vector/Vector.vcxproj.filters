@@ -4,6 +4,9 @@
     <Filter Include="Vector">
       <UniqueIdentifier>{789BD6D7-643D-01AE-4DF8-1402393988FE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vector\Events">
+      <UniqueIdentifier>{5CB04B51-C870-C787-91AB-1005FD2A0C64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Vector.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Vector\EntryPoint.h">
       <Filter>Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector\Events\ApplicationEvent.h">
+      <Filter>Vector\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector\Events\Event.h">
+      <Filter>Vector\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector\Events\KeyEvent.h">
+      <Filter>Vector\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector\Events\MouseEvent.h">
+      <Filter>Vector\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Vector\Log.h">
       <Filter>Vector</Filter>
