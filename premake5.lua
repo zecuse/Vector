@@ -18,6 +18,9 @@ project "Vector"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("obj/" .. outputdir .. "/%{prj.name}")
 	
+	pchheader "vcpch.h"
+	pchsource "Vector/src/vcpch.cpp"
+	
 	files
 	{
 		"%{prj.name}/src/**.h",

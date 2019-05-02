@@ -1,8 +1,6 @@
 #pragma once
 
-#include <string>
-#include <functional>
-
+#include "vcpch.h"
 #include "Vector/Core.h"
 
 namespace Vector
