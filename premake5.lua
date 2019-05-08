@@ -1,14 +1,15 @@
 workspace "Vector"
-	architecture "x64"
-	
-	configurations
-	{
-		"Debug",
-		"Release",
-		"Dist"
-	}
-
+architecture "x64"
+configurations
+{
+	"Debug",
+	"Release",
+	"Dist"
+}
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+includeDir = {}
+includeDir["glfw"] = "Vector/vendor/glfw/include"
+include "Vector/vendor/glfw"
 
 project "Vector"
 	location "Vector"
@@ -30,7 +31,14 @@ project "Vector"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{includeDir.glfw}"
+	}
+	
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 	
 	filter "system:windows"
@@ -50,7 +58,11 @@ project "Vector"
 		}
 	
 	filter "configurations:Debug"
-		defines "VC_DEBUG"
+		defines
+		{
+			"VC_DEBUG",
+			"VC_ENABLE_ASSERTS"
+		}
 		symbols "On"
 	
 	filter "configurations:Release"

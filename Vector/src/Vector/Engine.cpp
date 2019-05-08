@@ -1,11 +1,10 @@
 #include "vcpch.h"
 #include "Engine.h"
-#include "Log.h"
-#include "Vector/Events/ApplicationEvent.h"
 
 namespace Vector
 {
 	Engine::Engine()
+		: m_Window(std::unique_ptr<Window>(Window::Create()))
 	{
 
 	}
@@ -18,9 +17,9 @@ namespace Vector
 	void Engine::Run()
 	{
 		VC_CORE_INFO("Engine on");
-		WindowResizeEvent e(1200, 900);
-		VC_TRACE(e);
-
-		while (true);
+		while (m_Running)
+		{
+			m_Window->OnUpdate();
+		}
 	}
 }
