@@ -4,3 +4,4 @@
 [submodule "Vector/vendor/glfw"]
 	path = Vector/vendor/glfw
 	url = https://github.com/zecuse/glfw
+	ignore = dirty
